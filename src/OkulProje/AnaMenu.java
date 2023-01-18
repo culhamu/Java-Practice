@@ -5,35 +5,38 @@ import java.util.Scanner;
 
 public class AnaMenu {
     Scanner scan=new Scanner(System.in);
-    void menu() throws InterruptedException {
-        System.out.println(" ====================================\n" +
-                "    ÖĞRENCİ VE ÖĞRETMEN YÖNETİM PANELİ\n" +
-                "   ====================================\n" +
-                "    1- ÖĞRENCİ İŞLEMLERİ\n" +
-                "    2- ÖĞRETMEN İŞLEMLERİ\n" +
-                "    Q- ÇIKIŞ\n"+
-                "    SECİMİNİZ: ");
+    void menu(){
+        System.out.print("====================================\n" +
+                "\t ÖĞRENCİ VE ÖĞRETMEN YÖNETİM PANELİ\n" +
+                "\t====================================\n" +
+                "\t 1- ÖĞRENCİ İŞLEMLERİ\n" +
+                "\t 2- ÖĞRETMEN İŞLEMLERİ\n" +
+                "\t Q- ÇIKIŞ\n" +
+                "\t SEÇİMİNİZ: ");
+        int secim=0;
         try {
-            int secim=scan.nextInt();
+            secim=scan.nextInt();
             switch (secim){
                 case 1:{
                     OgrenciIslemler ogrenciMenu=new OgrenciIslemler();
+                    ogrenciMenu.ogrenciMenu();
                 }
                 case 2:{
                     OgretmenIslemler ogretmenMenu=new OgretmenIslemler();
+                    ogretmenMenu.ogrtMenu();
                 }
 
             }
         }catch (InputMismatchException e){
-            String secim=scan.next();
-            if (secim.equalsIgnoreCase("q")){
-                System.out.println("SİSTEMDEN ÇIKILIYOR");
+            String kontrol=scan.next();
+            if (kontrol.equalsIgnoreCase("q")){
+                System.out.println("SİSTEMDEN ÇIKIYOR");
                 System.exit(0);
             }else {
                 System.out.println("HATALI GİRİŞ YAPTINIZ");
-                Thread.sleep(2000);
                 menu();
             }
+
         }
     }
 

@@ -1,20 +1,17 @@
 package OkulProje;
 
 public class Ogretmen extends Kisi{
-    //Ad-Soyad,  kimlik No, yaş,bölüm,sicilno
+    //Ad-Soyad,  kimlik No, yaş, bölüm, ve sicil No
     private String bolum;
     private int sicilNo;
 
     public Ogretmen() {
     }
 
-    public Ogretmen(String ad, String soyad, String tcNo, String yas, String bolum, int sicilNo) {
-        super(ad, soyad, tcNo, yas);
+    public Ogretmen(String ad, String sad, String tcNo, int yas, String bolum, int sicilNo) {
+        super(ad, sad, tcNo, String.valueOf(yas));
         this.bolum = bolum;
         this.sicilNo = sicilNo;
-    }
-
-    public Ogretmen(String ad, String soyad, String tcNo, int yas, String bolum, int sicilNo) {
     }
 
     public String getBolum() {
@@ -35,8 +32,7 @@ public class Ogretmen extends Kisi{
 
     @Override
     public String toString() {
-        return
-               super.toString()+" "+ "bolum='" + bolum + '\'' +
-                ", sicilNo=" + sicilNo ;
+        return super.toString()+" " + "bolum='" + bolum + '\'' +
+                ", sicilNo=" + sicilNo;
     }
 }

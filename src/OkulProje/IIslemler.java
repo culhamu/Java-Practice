@@ -10,9 +10,9 @@ public interface IIslemler {
        Q-ÇIKIŞ
    SEÇİMİNİZ:
      */
-    void ekleme();
-    void arama();
-    void listeleme();
-    void silme();
+    void ekleme() throws InterruptedException;
+    void arama() throws InterruptedException;
+    void listeleme() throws InterruptedException;
+    void silme() throws InterruptedException;
 
 }

@@ -1,32 +1,24 @@
 package OkulProje;
 
+
 public class Kisi {
     /*
     Ad-Soyad,  kimlik No, yaş
+Ad-Soyad,  kimlik No, yaş
      */
     private String ad;
-    private String soyad;
+    private String Sad;
     private String tcNo;
-    private String yas;
-
-    @Override
-    public String toString() {
-        return "Kisi{" +
-                "ad='" + ad + '\'' +
-                ", soyad='" + soyad + '\'' +
-                ", tcNo='" + tcNo + '\'' +
-                ", yas='" + yas + '\'' +
-                '}';
-    }
-
-    public Kisi(String ad, String soyad, String tcNo, String yas) {
-        this.ad = ad;
-        this.soyad = soyad;
-        this.tcNo = tcNo;
-        this.yas = yas;
-    }
+    private int yas;
 
     public Kisi() {
+    }
+
+    public Kisi(String ad, String sad, String tcNo, int yas) {
+        this.ad = ad;
+        Sad = sad;
+        this.tcNo = tcNo;
+        this.yas = yas;
     }
 
     public String getAd() {
@@ -37,12 +29,12 @@ public class Kisi {
         this.ad = ad;
     }
 
-    public String getSoyad() {
-        return soyad;
+    public String getSad() {
+        return Sad;
     }
 
-    public void setSoyad(String soyad) {
-        this.soyad = soyad;
+    public void setSad(String sad) {
+        Sad = sad;
     }
 
     public String getTcNo() {
@@ -53,11 +45,20 @@ public class Kisi {
         this.tcNo = tcNo;
     }
 
-    public String getYas() {
+    public int getYas() {
         return yas;
     }
 
-    public void setYas(String yas) {
+    public void setYas(int yas) {
         this.yas = yas;
     }
+
+    @Override
+    public String toString() {
+        return "ad='" + ad + '\'' +
+                ", Sad='" + Sad + '\'' +
+                ", tcNo='" + tcNo + '\'' +
+                ", yas=" + yas ;
+    }
 }
+

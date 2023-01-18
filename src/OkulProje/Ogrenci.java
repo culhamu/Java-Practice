@@ -27,6 +27,9 @@ public class Ogrenci extends Kisi{
         this.sinif = sinif;
     }
 
+    public Ogrenci() {
+    }
+
     @Override
     public String toString() {
         return super.toString() +" "+
