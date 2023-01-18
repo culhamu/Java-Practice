@@ -5,6 +5,8 @@ public class Ogrenci extends Kisi{
     private int numara;
     private int sinif;
 
+
+
     public int getNumara() {
         return numara;
     }
@@ -22,7 +24,7 @@ public class Ogrenci extends Kisi{
     }
 
     public Ogrenci(String ad, String soyad, String tcNo, String yas, int numara, int sinif) {
-        super(ad, soyad, tcNo, yas);
+        super(ad, soyad, tcNo, Integer.parseInt(yas));
         this.numara = numara;
         this.sinif = sinif;
     }

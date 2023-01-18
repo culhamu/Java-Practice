@@ -59,10 +59,10 @@ public class OgrenciIslemler implements IIslemler{
         System.out.print("ÖĞRENCİNİN TC NOSUNU GİRİNİZ: ");
         String tcNo=scan.next();
         System.out.print("ÖĞRECİNİN YASINI GİRİNİZ: ");
-        int yas=scan.nextInt();
+        String yas=scan.next();
         scan.nextLine();
         System.out.print("ÖĞRENCİNİN SINIFINI GİRİNİZ: ");
-        String sinif=scan.next();
+        int sinif=scan.nextInt();
         Ogrenci ogrenci=new Ogrenci(ad,sAd,tcNo,yas,numara++,sinif);
         ogrenciList.add(ogrenci);
         listeleme();
