@@ -9,7 +9,7 @@ public class Ogretmen extends Kisi{
     }
 
     public Ogretmen(String ad, String sad, String tcNo, int yas, String bolum, int sicilNo) {
-        super(ad, sad, tcNo, String.valueOf(yas));
+        super(ad, sad, tcNo, Integer.parseInt(String.valueOf(yas)));
         this.bolum = bolum;
         this.sicilNo = sicilNo;
     }
